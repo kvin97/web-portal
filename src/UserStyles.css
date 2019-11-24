@@ -1,0 +1,13 @@
+#user {
+	width: 30%;
+	padding: 12px 20px;
+	margin: 8px;
+	box-sizing: border-box;
+	border: 2px solid red;
+	border-radius: 4px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#userLabel {
+	font-family: Arial, Helvetica, sans-serif;
+}
