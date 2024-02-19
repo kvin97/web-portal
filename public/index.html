@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>React App</title>
-</head>
+  <body>
+    <div class="app-container">
+      <div id="root" classs="app-container"></div>
+    </div>
 
-<body>
-  <div class="app-container">
-    <div id="root" classs="app-container"></div>
-  </div>
+    <script src="https://unpkg.com/systemjs@3.1.2/dist/system.js"></script>
+    <script src="https://unpkg.com/systemjs@3.1.2/dist/extras/amd.js"></script>
+    <script src="https://unpkg.com/systemjs@3.1.2/dist/extras/named-exports.js"></script>
 
-  <script src="https://unpkg.com/systemjs@3.1.2/dist/system.js"></script>
-  <script src="https://unpkg.com/systemjs@3.1.2/dist/extras/amd.js"></script>
-  <script src="https://unpkg.com/systemjs@3.1.2/dist/extras/named-exports.js"></script>
-
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@portal/dashboard": "%REACT_APP_DASHBOARD%/static/js/bundle.js",
-        "@portal/payment": "%REACT_APP_PAYMENT%/static/js/bundle.js",
-        "@portal/discussion": "%REACT_APP_DISCUSSION%/static/js/bundle.js"
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@portal/dashboard": "%REACT_APP_DASHBOARD%/static/js/bundle.js",
+          "@portal/payment": "%REACT_APP_PAYMENT%/bundle.js"
+        }
       }
-    }
-  </script>
+    </script>
 
-  <script>
-    var SystemJS = System;
-  </script>
-</body>
-
+    <script>
+      var SystemJS = System;
+    </script>
+  </body>
 </html>
