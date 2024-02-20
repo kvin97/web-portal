@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import AppSwitch from './AppSwitch';
 function MainApp() {
@@ -8,8 +8,10 @@ function MainApp() {
   return (
     <div>
           <Router>
-              <Route path="/appSwitch" render={() => <AppSwitch setUserName={setUserName}/>}/>
-              <Route path="/" render={() => <App userName={userName}/>}/>
+            <Switch>
+                <Route path="/appSwitch" render={() => <AppSwitch setUserName={setUserName}/>}/>
+                <Route path="/" render={() => <App userName={userName}/>}/>
+            </Switch>   
           </Router>
     </div>
   );
