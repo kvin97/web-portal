@@ -1,16 +1,21 @@
-import React,{ useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import App from './App';
-import AppSwitch from './AppSwitch';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import App from "./App";
+import AppSwitch from "./AppSwitch";
 function MainApp() {
-    const [userName,setUserName] = useState("");
-    console.log("USERNAME",userName);
+  const [userName, setUserName] = useState("");
+  console.log("USERNAME", userName);
   return (
     <div>
-          <Router>
-              <Route path="/appSwitch" render={() => <AppSwitch setUserName={setUserName}/>}/>
-              <Route path="/" render={() => <App userName={userName}/>}/>
-          </Router>
+      <Router>
+        <Switch>
+          <Route
+            path="/appSwitch"
+            render={() => <AppSwitch setUserName={setUserName} />}
+          />
+          <Route path="/" render={() => <App userName={userName} />} />
+        </Switch>
+      </Router>
     </div>
   );
 }
